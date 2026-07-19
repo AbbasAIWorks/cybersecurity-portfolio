@@ -8,12 +8,11 @@
 export const profile = {
   name: "Syed Muhammad Abbas Ali",
   role: "Junior Cybersecurity Specialist",
-  tagline:
-    "I help individuals and small businesses identify security weaknesses, improve security posture, and build safer digital systems — while continuously expanding my cybersecurity skills through practical projects and hands-on labs.",
-  location: "PLACEHOLDER — City, Country",
-  email: "PLACEHOLDER — your@email.com",
-  github: "https://github.com/PLACEHOLDER",
-  linkedin: "https://linkedin.com/in/PLACEHOLDER",
+  ...
+  location: " Punjab, Pakistan",
+  email: "abbasalijafari110@gmail.com",
+  github: "https://github.com/AbbasAIWorks",
+  linkedin: "www.linkedin.com/in/abbasjafari1",
   resumeUrl: "/resume-placeholder.pdf",
 };
 
