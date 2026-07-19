@@ -109,7 +109,7 @@ export function Contact() {
 
             <div>
               <label htmlFor="reason" className="text-xs text-ink-muted">
-                I'm reaching out as a...
+                I&apos;m reaching out as a...
               </label>
               <select
                 id="reason"
