@@ -45,7 +45,7 @@ export function Contact() {
           />
 
           <div className="mt-8 space-y-4">
-            
+            <a
               href={`mailto:${profile.email}`}
               className="flex items-center gap-3 text-sm text-ink-muted hover:text-ink transition-colors"
             >
@@ -54,7 +54,7 @@ export function Contact() {
             <div className="flex items-center gap-3 text-sm text-ink-muted">
               <MapPin className="h-4 w-4 text-signal-cyan" /> {profile.location}
             </div>
-            
+            <a
               href={profile.github}
               target="_blank"
               rel="noreferrer"
@@ -62,7 +62,7 @@ export function Contact() {
             >
               <Github className="h-4 w-4 text-signal-cyan" /> GitHub
             </a>
-            
+            <a
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -70,7 +70,7 @@ export function Contact() {
             >
               <Linkedin className="h-4 w-4 text-signal-cyan" /> LinkedIn
             </a>
-            
+            <a
               href={profile.resumeUrl}
               className="flex items-center gap-3 text-sm text-ink-muted hover:text-ink transition-colors"
             >
