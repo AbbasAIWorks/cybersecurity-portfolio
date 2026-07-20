@@ -17,14 +17,16 @@ export function Contact() {
     setStatus("sending");
     const form = e.currentTarget;
     const payload = Object.fromEntries(new FormData(form).entries());
+    payload.access_key = "b9838f3d-a1e6-427b-afcb-c489d3c9d63c";
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error("Request failed");
+      const data = await res.json();
+      if (!data.success) throw new Error("Request failed");
       setStatus("sent");
       form.reset();
     } catch {
@@ -43,7 +45,7 @@ export function Contact() {
           />
 
           <div className="mt-8 space-y-4">
-            <a
+            
               href={`mailto:${profile.email}`}
               className="flex items-center gap-3 text-sm text-ink-muted hover:text-ink transition-colors"
             >
@@ -52,7 +54,7 @@ export function Contact() {
             <div className="flex items-center gap-3 text-sm text-ink-muted">
               <MapPin className="h-4 w-4 text-signal-cyan" /> {profile.location}
             </div>
-            <a
+            
               href={profile.github}
               target="_blank"
               rel="noreferrer"
@@ -60,7 +62,7 @@ export function Contact() {
             >
               <Github className="h-4 w-4 text-signal-cyan" /> GitHub
             </a>
-            <a
+            
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -68,7 +70,7 @@ export function Contact() {
             >
               <Linkedin className="h-4 w-4 text-signal-cyan" /> LinkedIn
             </a>
-            <a
+            
               href={profile.resumeUrl}
               className="flex items-center gap-3 text-sm text-ink-muted hover:text-ink transition-colors"
             >
